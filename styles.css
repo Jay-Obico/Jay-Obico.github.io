@@ -1,3 +1,15 @@
+#CpE-Admission {
+    display:none;
+}
+
 .dropdown:hover > .dropdown-menu{
     display: block;
+}
+
+.contact{
+    text-decoration: none !important;
+}
+
+#body{
+    overflow-y: scroll;
 }
