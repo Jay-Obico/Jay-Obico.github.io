@@ -1,0 +1,11 @@
+NAVEA, ROY FRANCIS R.
+Associate Professor
+Electronics And Communications Engineering
+Dr. Roy Francis Navea received his B.S. degree in Electronics and Communications Engineering (ECE) from the Mapua Institute of Technology, Intramuros, Manila in 2003, M.S. and PhD degree in ECE from De La Salle University, Manila in 2012 and 2017, respectively. Currently, he is an Associate Professor in the Electronics and Communications Engineering Department of De La Salle University, Manila. His research interest is generally in the field of digital signal processing associated to bioinformatics and biomedical devices, electronic and communication networks, and internet of things that also includes artificial and computational intelligence. His recent works dealt with the analysis of 1D (acoustic & EEG) and 2D (images) signals, and networked computer vision-based surveillance systems.
+
+CONTACTS
+emaemail: roy.navea@dlsu.edu.ph
+acaacademia: https://dlsu.academia.edu/RoyFrancisNavea
+googooglescholar: https://scholar.google.com.ph/citations?hl=en&user=p0VUfgsAAAAJ
+linlinkedin: https://www.linkedin.com/in/roy-francis-navea-066900b5/
+resresearchgate: https://www.researchgate.net/profile/Roy_Navea?ev=hdr_xprf

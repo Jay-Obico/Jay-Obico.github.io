@@ -1,0 +1,9 @@
+YAP, RODERICK Y.
+Associate Professor
+Electronics And Communications Engineering
+Yap's field of specialization is in Integrated Circuit Design. Most of the digital design he did were implemented on Field Programmable Gate Array as the target device using Hardware Description Language as design input. Some of the projects he worked on before include microprocessor development and control systems. His more recent works include hardware modeling on some artificial intelligence applications such as fuzzy logic, genetic algorithm, convolutional neural network and clustering.
+
+CONTACTS
+email: roderick.yap@dlsu.edu.ph
+googlescholar: https://scholar.google.com/citations?user=4rvLg_MAAAAJ&hl=en
+researchgate: http://www.researchgate.net/profile/Roderick_Yyap
