@@ -1,0 +1,11 @@
+CABATUAN, MELVIN K.
+Associate Professor
+Electronics And Communications Engineering
+Melvin K. Cabatuan received the B.Sc. degree in Electronics and Communications Engineering (ECE) from Cebu Institute of Technology, Cebu, Philippines, in 2004; MS degree in Engineering from Nara Institute of Science and Technology (NAIST), Nara, Japan, in 2010; and Ph.D. degree in ECE from De La Salle University (DLSU) - Manila in 2016. He joined the Electronics and Communications Engineering department of DLSU in 2011, where he is currently an Assistant Professor. His current research interest involves Machine/Deep Learning, Computer Graphics, and Computer Vision applications to Health Informatics, Education Technology, Game/Graphic Content Development, and Mobile Computing. He is knowledgeable in programming languages - C/Cpp, Java, and MatLab/Octave scripting. He has more than 5 year experience in computer vision application development with OpenCV library in the mobile framework.
+
+CONTACTS
+email: melvin.cabatuan@dlsu.edu.ph
+academia: http://dlsu.academia.edu/MelvinCabatuan
+googlescholar: https://scholar.google.com/citations?user=5zA75_oAAAAJ&hl=en
+linkedin: https://ph.linkedin.com/in/cabatuanm
+researchgate: https://www.researchgate.net/profile/Melvin_Cabatuan
