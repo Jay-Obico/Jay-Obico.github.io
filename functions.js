@@ -1,5 +1,13 @@
 window.onload = (function(){
-    document.getElementById("ECE-btn").disabled = true;
+    try{
+        document.getElementById("ECE-btn").disabled = true;
+        
+    }catch(e){}
+
+    try{
+        document.getElementById("ECE-btn-CSO").disabled = true;
+    }catch(e){}
+    
 });
 
 function getID(clicked){
@@ -24,6 +32,19 @@ function getID(clicked){
         document.getElementById("ECE-btn").disabled = false;
         
         
+    }else if (instance==="ECE-btn-CSO"){
+
+        document.getElementById("ECE").classList.remove("d-none");
+        document.getElementById("CpE").classList.add("d-none");
+        document.getElementById("ECE-btn-CSO").disabled = true;
+        document.getElementById("CpE-btn-CSO").disabled = false;
+
+    }else if (instance==="CpE-btn-CSO"){
+        document.getElementById("ECE").classList.add("d-none");
+        document.getElementById("CpE").classList.remove("d-none");
+        document.getElementById("CpE-btn-CSO").disabled = true;
+        document.getElementById("ECE-btn-CSO").disabled = false;
+
     }
  }
 
