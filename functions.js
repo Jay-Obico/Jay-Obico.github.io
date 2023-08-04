@@ -6,6 +6,7 @@ window.onload = (function(){
 
     try{
         document.getElementById("ECE-btn-CSO").disabled = true;
+        document.getElementById("CpE").classList.add("d-none");
     }catch(e){}
     
 });
