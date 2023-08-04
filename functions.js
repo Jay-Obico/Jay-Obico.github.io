@@ -1,7 +1,7 @@
 window.onload = (function(){
     try{
         document.getElementById("ECE-btn").disabled = true;
-        
+        document.getElementById("CpE").classList.add("d-none");
     }catch(e){}
 
     try{
@@ -18,8 +18,8 @@ function getID(clicked){
 
     if(instance==="ECE-btn"){
 
-        document.getElementById("ECE").style.display = 'block';
-        document.getElementById("CpE").style.display = 'none';
+        document.getElementById("ECE").classList.remove("d-none");
+        document.getElementById("CpE").classList.add("d-none");
         document.getElementById("ECE-btn").disabled = true;
         document.getElementById("CpE-btn").disabled = false;
     
@@ -27,8 +27,8 @@ function getID(clicked){
     }
     else if(instance==="CpE-btn"){
         
-        document.getElementById("ECE").style.display = 'none';
-        document.getElementById("CpE").style.display = 'block';
+        document.getElementById("ECE").classList.add("d-none");
+        document.getElementById("CpE").classList.remove("d-none");
         document.getElementById("CpE-btn").disabled = true;
         document.getElementById("ECE-btn").disabled = false;
         
