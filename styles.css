@@ -6,6 +6,11 @@
     display: block;
 }
 
+.dropdown:hover > .dropdown-menu, #Community_Dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+
 .contact{
     text-decoration: none !important;
 }
