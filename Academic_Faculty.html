@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="functions.js"></script>
+        <!--Will Replace After-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="styles.css">
+        
+        <title>Faculty</title>
+        
+    </head>
+    <body>
+        <!--Nav Bar-->
+        <nav class="navbar navbar-expand-lg body-teriary ms-5 ps-5 mb-5">
+            <div class="container-fluid">
+                <a href="" class="navbar-brand">
+                    <img src="Project/images/Logo/DLSU_Seal.png" alt="DLSU Logo" height="25" width="25">
+                    DLSU
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="toggle">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Main Navigation Bar Content -->
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href=" " class="nav-link dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                                Admissions
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="Undergraduate.html" class="nav-link">Undergraduate</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="Graduate.html" class="nav-link">Graduate</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle active" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                                Academics
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li class="dropdown-item">
+                                    Faculty
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="Academic_Awards_and_Achievements.html" class="nav-link">
+                                    Awards and Achievements
+                                </a> 
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="Academic_Community_Engagement.html" class="nav-link">Community Engagement and Linkages</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                                Community
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li id="Community_Dropdown" class="dropdown-item">
+                                    <a href="" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                                        Research
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li>
+                                            <a href="Research_Thesis_Archive.html" class="dropdown-item">Thesis Archive</a>
+                                        </li>
+                                        <li>
+                                            <a href="Research_Conferences.html" class="dropdown-item">
+                                                Conferences
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="Community_Student_Org.html" class="nav-link">
+                                        Student Organization
+                                    </a> 
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a href="" class="nav-link dropdown-toggle" role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">
+                                Contact and Forms
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li class="dropdown-item">
+                                    <a href="Contact_Us.html" class="nav-link">Contact Us</a>
+                                    
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="Board_Of_Advisors.html" class="nav-link">Board of Advisors</a>
+                                    
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+
+        <div id="Faculty" class="container">
+            <h3 class="fw-bold">Faculty</h3>
+            <div class="row">
+                <div class="col-10">
+                    <form class="d-flex mt-5 mb-5" role="search">
+                        <input id="data_in" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onkeyup="search()">
+                        <button class="btn btn-success" type="submit" disabled>Search</button>
+                        <button class="btn btn-success dropdown-toggle"  role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Sort</button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a id="F-btn" type="button" class="btn" onclick="getID(this)">Faculty</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a id="OC-btn" type="button" class="btn" onclick="getID(this)">Organizational Chart</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a id="R-btn" type="button" class="btn" onclick="filter()">Research and Publications</a>
+                            </li>
+                        </ul>
+                      </form>
+                </div>
+
+                <div class="col-2 mt-5" style="position: absolute; left:90em">
+                    <h3 class="fw-bold">Academics</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link " aria-current="page" href="Academic_Faculty.html">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Academics_Laboratory.html">Laboratories and Facilities</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Academic_Awards_and_Achievements.html">Awards and Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Academic_Community_Engagement.html">Community Engagement and Linkages</a>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+        
+            <div class="row align-items-center">
+                <!-- Abuan -->
+                <div class="col-2 N_research">
+
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Abuan">
+                        <div class="card">
+                            <img src="Project/accts/abuan.jpg" class="card-img-top" alt="Abuan">
+                            <div class="card-body">
+                                <h6 class="card-title">Abuan, Donabel D.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                
+                </div>
+
+                <!-- Ambata -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Ambata">
+                        <div class="card">
+                            <img src="Project/accts/ambata.jpg" class="card-img-top" alt="Ambata">
+                            <div class="card-body">
+                                <h6 class="card-title">Ambata, Leonard U.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+    
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                
+                 <!-- Alo -->
+                <div class="col-2 N_research">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Alo">
+                        <div class="card">
+                            <img src="Project/accts/alo.jpg" class="card-img-top" alt="Alo">
+                            <div class="card-body">
+                                <h6 class="card-title">Alo, Ma. Rowena F.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+
+                <!-- Bandala -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Bandala">
+                        <div class="card">
+                            <img src="Project/accts/bandala.jpg" class="card-img-top" alt="Bandala">
+                            <div class="card-body">
+                                <h6 class="card-title">Bandala, Argel A.</h6>
+                                <p class="card-text">Full Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <!-- Cabatuan -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Cabatuan">
+                        <div class="card">
+                            <img src="Project/accts/cabanatuan.jpg" class="card-img-top" alt="Cabatuan">
+                            <div class="card-body">
+                                <h6 class="card-title">Cabatuan, Melvin K.</h6>
+                                <p class="card-text">Associate Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                
+            </div>
+            
+            <div class="row align-items-center mt-5">
+                <!-- Del Rosario -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Del">
+                        <div class="card">
+                            <img src="Project/accts/del rosario.jpg" class="card-img-top" alt="Illahi">
+                            <div class="card-body">
+                                <h6 class="card-title">Del Rosario, Jay Robert B.</h6>
+                                <p class="card-text">Associate Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Illahi -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Illahi">
+                        <div class="card">
+                            <img src="Project/accts/illahi.jpg" class="card-img-top" alt="Illahi">
+                            <div class="card-body">
+                                <h6 class="card-title">Illahi, Ana Antoniette C.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+
+                <!-- Lim -->
+                <div class="col-2 N_research">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Lim">
+                        <div class="card">
+                            <img src="Project/accts/lim.jpg" class="card-img-top" alt="Lim">
+                            <div class="card-body">
+                                <h6 class="card-title">Lim, Gian Carlo L.</h6>
+                                <p class="card-text">Assitant Prof. Lecturer</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <!-- Maningo -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Maningo">
+                        <div class="card">
+                            <img src="Project/accts/maningo.jpg" class="card-img-top" alt="Maningo">
+                            <div class="card-body">
+                                <h6 class="card-title">Maningo, Jose Martin Z.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <!-- Pakzad -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Pakzad">
+                        <div class="card">
+                            <img src="Project/accts/pakzad.jpg" class="card-img-top" alt="Pakzad">
+                            <div class="card-body">
+                                <h6 class="card-title">Pakzad, Armie E.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                
+            </div>
+
+            
+                    
+        </div>
+
+
+        <div id="Organizational" class="d-none container">
+
+            <h3 class="fw-bold">Organization Chart</h3>
+            <div class="row">
+                <div class="col-10">
+                    <form class="d-flex mt-5 mb-5" role="search">
+                        <input id="data_in" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onkeyup="search()" disabled>
+                        <button class="btn btn-success" type="submit" disabled>Search</button>
+                        <button class="btn btn-success dropdown-toggle"  role="button" data-bs-auto-close="outside" data-bs-toggle="dropdown" aria-expanded="false">Sort</button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a id="F-btn" type="button" class="btn" onclick="getID(this)">Faculty</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a id="OC-btn" type="button" class="btn" onclick="getID(this)">Organizational Chart</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a id="R-btn" type="button" class="btn" onclick="filter()">Research and Publications</a>
+                            </li>
+                        </ul>
+                      </form>
+                </div>
+
+                <div class="col-2 mt-5" style="position: absolute; left:90em">
+                    <h3 class="fw-bold">Academics</h3>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link " aria-current="page" href="Academic_Faculty.html">Faculty</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Academics_Laboratory.html">Laboratories and Facilities</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Academic_Awards_and_Achievements.html">Awards and Achievements</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="Academic_Community_Engagement.html">Community Engagement and Linkages</a>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+            
+            <div class="row justify-content-center mt-5">
+                <!-- Bandala -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Bandala">
+                        <div class="card">
+                            <img src="Project/accts/bandala.jpg" class="card-img-top" alt="Bandala">
+                            <div class="card-body">
+                                <h6 class="card-title">Bandala, Argel A.</h6>
+                                <p class="card-text">Full Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+
+            </div>
+
+            <div class="row justify-content-evenly mt-5">
+                <!-- Pakzad -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Pakzad">
+                        <div class="card">
+                            <img src="Project/accts/pakzad.jpg" class="card-img-top" alt="Pakzad">
+                            <div class="card-body">
+                                <h6 class="card-title">Pakzad, Armie E.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <!-- Illahi -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Illahi">
+                        <div class="card">
+                            <img src="Project/accts/illahi.jpg" class="card-img-top" alt="Illahi">
+                            <div class="card-body">
+                                <h6 class="card-title">Illahi, Ana Antoniette C.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+            <div class="row justify-content-evenly mt-5">
+
+                <!-- Dummy to rearrange -->
+
+                <div class="d-hidden col-2 ">
+                </div>
+
+                 <!-- Alo -->
+                 <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Alo">
+                        <div class="card">
+                            <img src="Project/accts/alo.jpg" class="card-img-top" alt="Alo">
+                            <div class="card-body">
+                                <h6 class="card-title">Alo, Ma. Rowena F.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-10">
+                    <h3 class="fw-bold  mt-5">
+                        Faculty and Staff
+                    </h3>
+                    
+                </div>
+            </div>
+            <div class="row align-items-center ms-5">
+                <!-- Cabatuan -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Cabatuan">
+                        <div class="card">
+                            <img src="Project/accts/cabanatuan.jpg" class="card-img-top" alt="Cabatuan">
+                            <div class="card-body">
+                                <h6 class="card-title">Cabatuan, Melvin K.</h6>
+                                <p class="card-text">Associate Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <!-- Del Rosario -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Del">
+                        <div class="card">
+                            <img src="Project/accts/del rosario.jpg" class="card-img-top" alt="Illahi">
+                            <div class="card-body">
+                                <h6 class="card-title">Del Rosario, Jay Robert B.</h6>
+                                <p class="card-text">Associate Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Abuan -->
+                <div class="col-2">
+
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Abuan">
+                        <div class="card">
+                            <img src="Project/accts/abuan.jpg" class="card-img-top" alt="Abuan">
+                            <div class="card-body">
+                                <h6 class="card-title">Abuan, Donabel D.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                
+                </div>
+
+                <!-- Ambata -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Ambata">
+                        <div class="card">
+                            <img src="Project/accts/ambata.jpg" class="card-img-top" alt="Ambata">
+                            <div class="card-body">
+                                <h6 class="card-title">Ambata, Leonard U.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+    
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+
+            
+            <div class="row align-items-center ms-5 mt-5">
+
+                <!-- Maningo -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Maningo">
+                        <div class="card">
+                            <img src="Project/accts/maningo.jpg" class="card-img-top" alt="Maningo">
+                            <div class="card-body">
+                                <h6 class="card-title">Maningo, Jose Martin Z.</h6>
+                                <p class="card-text">Assitant Professor</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+                <!-- Lim -->
+                <div class="col-2">
+                    <a type="button" class="btn" data-bs-toggle="modal" data-bs-target="#Lim">
+                        <div class="card">
+                            <img src="Project/accts/lim.jpg" class="card-img-top" alt="Lim">
+                            <div class="card-body">
+                                <h6 class="card-title">Lim, Gian Carlo L.</h6>
+                                <p class="card-text">Assitant Prof. Lecturer</p>
+                                <p class="card-text">Electronics And Communications Engineering</p>
+                            </div>
+                        </div>
+                    </a>
+                    
+                    
+                    
+                </div>
+
+
+
+
+
+                
+            </div>
+
+                
+            
+            
+        </div>
+
+
+        <!-- Modals -->
+
+        <!-- Abuan -->
+        <div class="modal fade" id="Abuan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Abuan, Donabel D.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/abuan.jpg" class="card-img-top" alt="Abuan">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            I'm Donabel de Veas- Abuan, married to Hubert Abuan from the Gokongwei College of Engineering, Electronics and Communications Department. Currently Assistant Professor 1. I started my teaching career profession here at DLDU- Manila last May 04, 2009 up to the present. From the period of May 04, 2009 to May 2012, I'm a part- time instructor with a rank of a Lecturer 4. I got my Bachelor's degree in Electronics and Communications Engineering at Mapua Institute of Technology and took my license for that course in 1997. Then, I completed and graduated my Masteral degree of Technology at Technological University of the Philippines (TUP- Manila) last March 2010. After taking this course, I applied as a full- time instructor with the same department and accepted as rank of a teaching Associate last June 2012. From that time I devoted some of my time of researching papers related to my field aside from teaching. The following researches which had already an ISSN numbers: Posicast Pulse Generation using LT Spice Simulations (October 18-19, 2012, ISSN 2094-0297), Security Systems from Remote Farm (September 20-24, 2013, ISSN 2301-3702), Surface Electromyography Signal for Control of Myoelecric Prosthesis of the Upper- Limb Using Independent Component Analysis (September 20-24, 2013, ISSN 2301-3702), Detection and Recognition of Faces from Still Images Utilizing Artificial Neural Networks November, 2013 not yet published from HNICEM but already accepted). Through this papers and well accepted evaluated, I promoted as Assistant Professor 1. I'm handling Electronics and Cmputer subjects and some Communications subjects. My focus of interest right now is to finish my PhD education here at DLSU- Manila and engaging most in Image Processing and Integrated Circuit design as my field of interests.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br> donabel.deveas@dlsu.edu.ph <br>donabel_abuan@dlsu.edu.ph</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Not Available</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ambata -->
+        <div class="modal fade" id="Ambata" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Ambata, Leonard U.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/ambata.jpg" class="card-img-top" alt="Ambata">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                           Not Available
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>leonard.ambata@dlsu.edu.ph</p>
+                                        <a href="https://scholar.google.com.ph/citations?user=zpJv7BgAAAAJ&hl=en" class="nav-link">Google Scholar</a>
+                                        <a href="https://www.researchgate.net/profile/Leonard-Ambata" class="nav-link">Resarch Gate</a>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Unmanned Aerial Vehicles</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alo -->
+        <div class="modal fade" id="Alo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Alo, Ma. Rowena F.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/alo.jpg" class="card-img-top" alt="Alo">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                           Not Available
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>email: ma.rowena.alo@dlsu.edu.ph</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Not Availabale</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bandala -->
+        <div class="modal fade" id="Bandala" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Bandala, Argel A.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/bandala.jpg" class="card-img-top" alt="Bandala">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Engr. Argel A. Bandala is currently a PhD-ECE Candidate in De La Salle University. He received his MS ECE from the same university in 2012 and received his BS ECE from the Polytechnic University of the Philippines in 2008. He is very active in the IEEE Philippine Section where he served as the Section Secretary for the years 2012 to present. He also serves as the secretary of IEEE Computational Intelligence Society Philippine Section from 2012 to present. He is also an active member of the IEEE Robotics and Automation Society from 2013 to present. His research area is on Computational Intelligence, Evolutionary Computation, Unmanned Aerial Vehicles and Distributed Computation.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>argel.bandala@dlsu.edu.ph</p>
+                                        <a href="http://dlsu.academia.edu/argelbandala" class="nav-link">Academia</a>
+                                        <a href="https://scholar.google.com.ph/citations?user=kCbRXosAAAAJ&hl=en" class="nav-link">Google Scholar</a>
+                                        <a href="https://ph.linkedin.com/pub/argel-bandala/25/120/516" class="nav-link">LinkedIn</a>
+                                        <a href="https://www.researchgate.net/profile/Argel_Bandala" class="nav-link">Resarch Gate</a>    
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Swarm Robotics, Unmanned Aerial Vehicles, Vision System</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cabatuan -->
+        <div class="modal fade" id="Cabatuan" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Cabatuan, Melvin K.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/cabanatuan.jpg" class="card-img-top" alt="Cabatuan">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Melvin K. Cabatuan received the B.Sc. degree in Electronics and Communications Engineering (ECE) from Cebu Institute of Technology, Cebu, Philippines, in 2004; MS degree in Engineering from Nara Institute of Science and Technology (NAIST), Nara, Japan, in 2010; and Ph.D. degree in ECE from De La Salle University (DLSU) - Manila in 2016. He joined the Electronics and Communications Engineering department of DLSU in 2011, where he is currently an Assistant Professor. His current research interest involves Machine/Deep Learning, Computer Graphics, and Computer Vision applications to Health Informatics, Education Technology, Game/Graphic Content Development, and Mobile Computing. He is knowledgeable in programming languages - C/Cpp, Java, and MatLab/Octave scripting. He has more than 5 year experience in computer vision application development with OpenCV library in the mobile framework.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>melvin.cabatuan@dlsu.edu.ph</p>
+                                        <a href="http://dlsu.academia.edu/MelvinCabatuan" class="nav-link">Academia</a>
+                                        <a href="https://scholar.google.com/citations?user=5zA75_oAAAAJ&hl=en" class="nav-link">Google Scholar</a>
+                                        <a href="https://ph.linkedin.com/in/cabatuanm" class="nav-link">LinkedIn</a>
+                                        <a href="https://www.researchgate.net/profile/Melvin_Cabatuan" class="nav-link">Resarch Gate</a>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Computer Vision, Image Processing, Computational Intelligence, Algorithm Development</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Del Rosario -->
+        <div class="modal fade" id="Del" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Del Rosario, Jay Robert B.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/del rosario.jpg" class="card-img-top" alt="Del Rosario">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Jay Robert B. Del Rosario was born at Imus in Cavite, PHILIPPINES, on October 11, 1982. He obtained his Certificate in Mechatronics in Milan, Italy late 2010 after passing the Mechatronics Specialist Exam. An experienced Assistant Professor with a demonstrated history of working in the higher education industry locally and internationally. Skilled in various programming languages, mechatronics and robotics. Strong education professional with a Doctor of Philosophy focused in Electronics and Communications Engineering from De La Salle University- Manila and Doctor of Philosophy (Cand.) in Education major in Educational Management from Cavite State University- Don Severino delas Alas Campus. Dr. Del Rosario was a former Professor and chairman of Mechatronics and Robotics Society in the Kingdom of Bahrain and Kingdom of Saudi Arabia from 2008-2011. His research interests include Mechatronics, Computer Systems Architecture, Webpage Design and Development, Software Engineering, Industrial Automation and Computational Intelligence. Most of his research articles can be viewed in Scopus, Google Scholar and Researchgate and a Professional Member of IEEE.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>jay.delrosario@dlsu.edu.ph</p>
+                                        <a href="http://dlsu.academia.edu/JDelRosario" class="nav-link">Academia</a>
+                                        <a href="https://scholar.google.com/citations?user=J0gkLzUAAAAJ&hl=en" class="nav-link">Google Scholar</a>
+                                        <a href="https://ph.linkedin.com/in/jayrobertdelrosario/" class="nav-link">LinkedIn</a>
+                                        <a href="https://www.researchgate.net/profile/Jay_Robert_Del_Rosario2" class="nav-link">Resarch Gate</a>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Mechatronics, Computer Systems Architecture, Webpage Design and Development, Software Engineering, Industrial Automation, Computational Intelligence</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Illahi -->
+        <div class="modal fade" id="Illahi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Illahi, Ana Antoniette C.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/illahi.jpg" class="card-img-top" alt="Illahi">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Not Available
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>ana.illahi@dlsu.edu.ph</p>
+                                        <a href="https://scholar.google.com/citations?user=DpDAbk0AAAAJ&hl=en&oi=ao" class="nav-link">Google Scholar</a>
+                                        <a href="https://ph.linkedin.com/in/cabatuanm" class="nav-link">LinkedIn</a>
+                                        <a href="https://www.researchgate.net/profile/Melvin_Cabatuan" class="nav-link">Resarch Gate</a>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Intelligent Systems, Image Processing, Internet of Things</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lim -->
+        <div class="modal fade" id="Lim" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Lim, Gian Carlo L.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/lim.jpg" class="card-img-top" alt="Lim">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Not Available
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>gian.lim@dlsu.edu.ph</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Not Available</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Maningo -->
+        <div class="modal fade" id="Maningo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Maningo, Jose Martin Z.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/maningo.jpg" class="card-img-top" alt="Maningo">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Engr. Jose Martin Z. Maningo is a Teaching Associate in the Department of Electronics and Communications Engineering. He graduated BS-MS ECE Cum Laude in De La Salle University - Manila last 2016. He has placed 10th in the ECE Licensure Exam in April 2017. He has various publications in the field of Swarm Robotics and Computational Intelligence.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>jose.martin.maningo@dlsu.edu.ph</p>
+                                        <a href="https://scholar.google.com/citations?user=8prBsuMAAAAJ&hl=en" class="nav-link">Google Scholar</a>
+                                        <a href="https://ph.linkedin.com/in/jose-martin-maningo-477666149/?trk=uno-choose-ge-no-intent&dl=no" class="nav-link">LinkedIn</a>
+                                        <a href="https://www.researchgate.net/profile/Jose_Martin_Maningo" class="nav-link">Resarch Gate</a>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Swarm Robotics, Intelligent Systems</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pakzad -->
+        <div class="modal fade" id="Pakzad" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Pakzad, Armie E.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                                <!-- Description -->
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="Project/accts/pakzad.jpg" class="card-img-top" alt="Cabatuan">
+                                    </div>
+
+                                    <div class="col-9">
+                                        <h5>Bio</h5>
+                                        <p>
+                                            Armie E. Pakzad is an Assistant Professor in the Electronics and Communications Engineering Department at the De La Salle University (DLSU) where she handles Computer Engineering professional courses. A graduate of Bachelor of Science in Computer Engineering and a holder of Master of Science in Electrical Engineering major in Computer Engineering. Completed her PhD ECE academic requirements at DLSU Manila. With research interest in microcontrollers applied to environmental technological projects.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-3">
+                                        <h5>Contacts</h5>
+                                        <p>Email: <br>armie.pakzad@dlsu.edu.ph</p>
+                                        <a href="https://scholar.google.com/citations?hl=en&user=6dj-o7QAAAAJ" class="nav-link">Google Scholar</a>
+                                        <a href="https://www.researchgate.net/profile/Armie-Pakzad" class="nav-link">Resarch Gate</a>
+                                    </div>
+                                    <div class="col-9">
+                                        <h5>Research Interest</h5>
+                                        <p>Television Whitespace, Reinforcement Learning, Microcontroller</p>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <footer class="mt-auto pb-3 pt-3">
+          <div class="container text-center">
+              Connect with Us
+              <div class="row align-items-center justify-content-center">
+                  <div class="col-4">
+                      <a href="https://www.facebook.com/DLSU.Manila.100" class="contact">
+                          <i class="bi bi-facebook"></i> 
+                      </a>
+                      <a href="https://twitter.com/dlsumanila"  class="contact">
+                          <i class="bi bi-twitter"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/school/de-la-salle-university/"  class="contact">
+                          <i class="bi bi-linkedin"></i>
+                      </a>
+                      <a href="https://www.youtube.com/channel/UC7LXC9usdkDC0YEvWxa_kHQ"  class="contact">
+                          <i class="bi bi-youtube"></i>
+                      </a>
+                  </div>
+              
+                  
+              </div>
+              
+          </div>
+        </footer>
+
+    </body>
+
+</html>

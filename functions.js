@@ -65,6 +65,26 @@ function getID(clicked){
         document.getElementById("Student-btn").disabled = true;
         document.getElementById("Faculty-btn").disabled = false;
 
+    }else if (instance==="F-btn"){
+        document.getElementById("F-btn").disabled = true;
+        document.getElementById("OC-btn").disabled = false;
+        document.getElementById("R-btn").disabled = false;
+        document.getElementById("Faculty").classList.remove("d-none");
+        document.getElementById("Organizational").classList.add("d-none");
+
+        var home;
+        home=document.getElementsByClassName("col-2");
+    
+        for (var i=0; i<home.length; i++){
+            home[i].classList.remove("d-none");
+        }
+
+    }else if (instance==="OC-btn"){
+        document.getElementById("F-btn").disabled = false;
+        document.getElementById("OC-btn").disabled = true;
+        document.getElementById("R-btn").disabled = false;
+        document.getElementById("Faculty").classList.add("d-none");
+        document.getElementById("Organizational").classList.remove("d-none");
     }
  }
 
@@ -85,6 +105,55 @@ function on_Click_Disable(clicked){
     }
 
 
+}
+
+function filter(){
+    document.getElementById("F-btn").disabled = false;
+    document.getElementById("OC-btn").disabled = false;
+    document.getElementById("R-btn").disabled = true;
+    document.getElementById("Faculty").classList.remove("d-none");
+    document.getElementById("Organizational").classList.add("d-none");
+
+    // Searching
+    // var home ,card_body, card_title;
+    // home = document.getElementsByClassName("card");
+    // card_body = home[0].getElementsByClassName("card-body");
+    // card_title = card_body[0].getElementsByClassName("card-title");
+    // console.log(card_title[0].innerHTML);
+
+    // Find those that dont have a researhc class
+    var home;
+    home=document.getElementsByClassName("N_research");
+
+    // Hide them
+    for (var i=0; i<home.length; i++){
+        home[i].classList.add("d-none");
+    }
+    
+}
+
+function search(){
+    // Searching
+
+    var home ,card_body, card_title, fix, name;
+    home = document.getElementsByClassName("card");
+    input = document.getElementById("data_in");
+    fix = input.value.toUpperCase();
+    console.log(fix);
+    for (var i=0; i<home.length; i++){
+        card_body = home[i].getElementsByClassName("card-body");
+        card_title = card_body[0].getElementsByClassName("card-title");
+        
+        name = card_title[0].textContent || card_title[0].innerText;
+        console.log(name);
+        if (name.toUpperCase().indexOf(fix) > -1){
+            home[i].parentElement.parentElement.classList.remove("d-none");
+        }else{
+            home[i].parentElement.parentElement.classList.add("d-none");
+        }
+    }
+
+    
 }
 
  
