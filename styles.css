@@ -1,7 +1,31 @@
+/* Tags */
+footer{
+    background-color: rgb(0, 105, 55);
+    color: whitesmoke;
+}
+
+i{
+    color: whitesmoke;
+}
+
+a{
+    color:rgb(0, 105, 55);
+}
+
+li{
+    color:rgb(0, 105, 55);
+}
+
+/* IDs */
 #CpE-Admission {
     display:none;
 }
 
+#body{
+    overflow-y: scroll;
+}
+
+/* Classes */
 .dropdown:hover > .dropdown-menu{
     display: block;
 }
@@ -15,6 +39,9 @@
     text-decoration: none !important;
 }
 
-#body{
-    overflow-y: scroll;
+
+
+.fw-bold{
+    color: rgb(0, 105, 55);
 }
+
